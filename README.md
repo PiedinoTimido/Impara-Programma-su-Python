@@ -1,2 +1,5 @@
 # Python_Istruzioni
 Impara a programmare su python tramite questo file scritto tutto su python!
+Per eseguirlo installa sulla tua macchina python (Versione 3 o successive)
+Questo è un file open-source quindi sono felice se si apportano modifiche per migliorare il programma <3
+Creato da Piedino Timido
