@@ -409,7 +409,7 @@ while True: # Ciclo principale per tornare al menu
         
     elif Scelta_Generale == "5": # Lezione 5 (Le Strutture di Dati)
         print("\n--- SEZIONE LEZIONE 5 (Le Strutture di Dati) ---")
-        time.sleep(2)   
+        time.sleep(2)
         print("Spesso si lavora con delle variabili ma se si vogliono memorizzare più valori, si usano le strutture di dati.")
         time.sleep(2)
         print("Prendiamo per esempio che siamo in un hotel e vogliamo memorizzare i nomi degli ospiti.")
@@ -481,6 +481,23 @@ while True: # Ciclo principale per tornare al menu
             else:
                 print("Non è corretto. Ricorda la sintassi `lista.append(elemento)`. Riprova.")
         
+                print("\n**List Comprehension**")
+        print("La list comprehension è un modo conciso per creare liste in Python.")
+        time.sleep(2)
+        print("Permette di creare una nuova lista applicando un'espressione a ogni elemento di una sequenza (es. un'altra lista) e filtrando gli elementi in base a una condizione.")
+        time.sleep(3)
+        print("La sintassi generale è: `[espressione for elemento in sequenza if condizione]`")
+        time.sleep(3)
+        print("Esempio: creare una lista con i quadrati dei numeri da 0 a 9:")
+        print("quadrati = [x**2 for x in range(10)]")
+        time.sleep(2)
+        print("Esempio: creare una lista con i numeri pari da 0 a 9:")
+        print("numeri_pari = [x for x in range(10) if x % 2 == 0]")
+        time.sleep(2)
+        print("La list comprehension rende il codice più leggibile e compatto, soprattutto per operazioni semplici.")
+        time.sleep(2)
+        print("Ora che hai visto le liste, passiamo alle altre strutture di dati.")
+
         # --- Tuple ---
         print("\n**Le Tuple**")
         print("Le tuple sono simili alle liste, ma sono **immutabili**, cioè non puoi modificarle dopo averle create.")
@@ -620,10 +637,109 @@ while True: # Ciclo principale per tornare al menu
         print("Le enumerazioni sono utili per rappresentare insiemi di costanti con nomi significativi, migliorando la leggibilità del codice.")
         time.sleep(2)
         print("\nHai completato la Lezione 5! Ora conosci le principali strutture di dati di Python e come usarle.")
-        print("Fine della Lezione 5. Torno al menu principale.")
+        print("fine della Lezione 5. Torno al menu principale.")
         time.sleep(2)
-    
-    elif Scelta_Generale == "6": # Se l'utente sceglie "6" per gli esercizi
+
+    # --- Esercizi Lezione 5 ---
+    elif Scelta_Generale == "7":  # Nuova opzione per esercizi Lezione 5
+        while True:
+            print("\n--- ESERCIZI LEZIONE 5 (Strutture di Dati) ---")
+            print("Hai scelto di fare gli esercizi sulla Lezione 5: Strutture di Dati.")
+            print("1: Crea una lista con tre nomi e stampala.")
+            print("2: Aggiungi un nome alla lista e stampala.")
+            print("3: Rimuovi un nome dalla lista e stampala.")
+            print("4: Ordina la lista di nomi e stampala.")
+            print("5: Crea una tupla con tre numeri e stampa il secondo elemento.")
+            print("6: Crea un dizionario con chiavi 'nome' e 'età', stampalo.")
+            print("7: Modifica il valore della chiave 'età' nel dizionario e stampalo.")
+            print("8: Crea un insieme con alcuni numeri, aggiungi un numero e stampalo.")
+            print("9: Rimuovi un elemento dall'insieme e stampalo.")
+            print("10: Crea una semplice enumerazione dei colori e stampane uno.")
+            print("11: Usa la list comprehension per creare una lista con i primi 10 numeri pari.")
+            print("12: Usa la list comprehension per creare una lista con i quadrati dei numeri dispari da 1 a 10.")
+            print("13: Torna al menu principale.")
+            Scelta_Esercizio = input("Scegli un esercizio (1-13) o 13 per tornare al menu: ").lower()
+
+            if Scelta_Esercizio == "1":
+                print("\n--- Soluzione Esercizio 1 ---")
+                print("nomi = ['Anna', 'Luca', 'Marco']")
+                print("print(nomi)")
+                print("--- Fine Esercizio 1 ---\n")
+            elif Scelta_Esercizio == "2":
+                print("\n--- Soluzione Esercizio 2 ---")
+                print("nomi = ['Anna', 'Luca', 'Marco']")
+                print("nomi.append('Sara')")
+                print("print(nomi)")
+                print("--- Fine Esercizio 2 ---\n")
+            elif Scelta_Esercizio == "3":
+                print("\n--- Soluzione Esercizio 3 ---")
+                print("nomi = ['Anna', 'Luca', 'Marco']")
+                print("nomi.remove('Luca')")
+                print("print(nomi)")
+                print("--- Fine Esercizio 3 ---\n")
+            elif Scelta_Esercizio == "4":
+                print("\n--- Soluzione Esercizio 4 ---")
+                print("nomi = ['Anna', 'Luca', 'Marco']")
+                print("nomi.sort()")
+                print("print(nomi)")
+                print("--- Fine Esercizio 4 ---\n")
+            elif Scelta_Esercizio == "5":
+                print("\n--- Soluzione Esercizio 5 ---")
+                print("numeri = (10, 20, 30)")
+                print("print(numeri[1])  # Stampa il secondo elemento")
+                print("--- Fine Esercizio 5 ---\n")
+            elif Scelta_Esercizio == "6":
+                print("\n--- Soluzione Esercizio 6 ---")
+                print("persona = {'nome': 'Anna', 'età': 25}")
+                print("print(persona)")
+                print("--- Fine Esercizio 6 ---\n")
+            elif Scelta_Esercizio == "7":
+                print("\n--- Soluzione Esercizio 7 ---")
+                print("persona = {'nome': 'Anna', 'età': 25}")
+                print("persona['età'] = 26")
+                print("print(persona)")
+                print("--- Fine Esercizio 7 ---\n")
+            elif Scelta_Esercizio == "8":
+                print("\n--- Soluzione Esercizio 8 ---")
+                print("numeri = {1, 2, 3}")
+                print("numeri.add(4)")
+                print("print(numeri)")
+                print("--- Fine Esercizio 8 ---\n")
+            elif Scelta_Esercizio == "9":
+                print("\n--- Soluzione Esercizio 9 ---")
+                print("numeri = {1, 2, 3, 4}")
+                print("numeri.remove(2)")
+                print("print(numeri)")
+                print("--- Fine Esercizio 9 ---\n")
+            elif Scelta_Esercizio == "10":
+                print("\n--- Soluzione Esercizio 10 ---")
+                print("from enum import Enum")
+                print("class Colori(Enum):")
+                print("    ROSSO = 1")
+                print("    VERDE = 2")
+                print("    BLU = 3")
+                print("print(Colori.ROSSO)")
+                print("--- Fine Esercizio 10 ---\n")
+            elif Scelta_Esercizio == "11":
+                print("\n--- Soluzione Esercizio 11 ---")
+                print("numeri_pari = [x for x in range(20) if x % 2 == 0]")
+                print("print(numeri_pari)")
+                print("--- Fine Esercizio 11 ---\n")
+            elif Scelta_Esercizio == "12":
+                print("\n--- Soluzione Esercizio 12 ---")
+                print("quadrati_dispari = [x**2 for x in range(1, 11) if x % 2 != 0]")
+                print("print(quadrati_dispari)")
+                print("--- Fine Esercizio 12 ---\n")
+            elif Scelta_Esercizio == "13" or Scelta_Esercizio == "torna":
+                print("Torno al menu principale.")
+                time.sleep(1)
+                break
+            else:
+                print("Scelta non valida. Scegli un numero tra 1 e 13.")
+            time.sleep(2)
+
+# ...existing code...
+    elif Scelta_Generale == "6": # Se l'utente sceglie "5" per gli esercizi
         while True: # Ciclo per la sezione esercizi per permettere di scegliere tra lezioni o tornare al menu
             print("\n--- SEZIONE ESERCIZI ---")
             print("Quale lezione di esercizi vuoi affrontare?")
@@ -1064,99 +1180,6 @@ while True: # Ciclo principale per tornare al menu
                         break
                     else:
                         print("Esercizio non trovato o scelta non valida. Per favore, scegli un numero da 1 a 15 o digita 'torna'.")
-                    time.sleep(2)
-
-            elif Scelta_Esercizi_Lezione == "5":
-                while True: # Ciclo interno per gli esercizi della Lezione 5
-                    print("\n--- ESERCIZI LEZIONE 5 ---")
-                    print("Hai scelto di fare gli esercizi sulla Lezione 5: Strutture di Dati.")
-                    print("1: Lista - Crea una lista di 5 frutti, aggiungine uno nuovo e stampala.")
-                    print("2: Lista - Ordina alfabeticamente una lista di nomi e stampala.")
-                    print("3: Tupla - Crea una tupla con 3 oggetti e stampa il primo e l'ultimo elemento.")
-                    print("4: Dizionario - Crea un dizionario per un animale (chiavi: 'nome', 'specie', 'età'). Stampa il nome dell'animale.")
-                    print("5: Dizionario - Aggiorna l'età dell'animale e stampa il dizionario aggiornato.")
-                    print("6: Insieme - Crea un insieme con numeri da 1 a 5, aggiungi il numero 6 e rimuovi il 3. Stampa l'insieme finale.")
-                    print("7: Insieme - Crea due insiemi di nomi. Stampa i nomi che sono presenti in entrambi (intersezione).")
-                    print("8: Ciclo + Lista - Crea una lista di città e usa un ciclo `for` per stampare ogni città.")
-                    print("9: Dizionario + Ciclo - Crea un dizionario di prodotti e prezzi. Usa un ciclo `for` per stampare ogni prodotto e il suo prezzo.")
-                    print("10: Combinazione - Chiedi all'utente di inserire 3 numeri. Salvali in una lista. Stampa la somma dei numeri usando un ciclo `for`.")
-                    
-                    time.sleep(2)
-                    Scelta_Esercizio = input("Quale esercizio della Lezione 5 vuoi vedere? Inserisci il numero (1-10) o 'torna' per tornare alla selezione esercizi: ").lower()
-                    
-                    if Scelta_Esercizio == "1":
-                        print("\n--- Soluzione Esercizio 1 ---")
-                        print("frutti = ['mela', 'banana', 'ciliegia', 'arancia', 'uva']")
-                        print("frutti.append('kiwi')")
-                        print("print(frutti)")
-                        print("--- Fine Esercizio 1 ---\n")
-                    elif Scelta_Esercizio == "2":
-                        print("\n--- Soluzione Esercizio 2 ---")
-                        print("nomi = ['Marco', 'Giulia', 'Andrea', 'Silvia']")
-                        print("nomi.sort()")
-                        print("print(nomi)")
-                        print("--- Fine Esercizio 2 ---\n")
-                    elif Scelta_Esercizio == "3":
-                        print("\n--- Soluzione Esercizio 3 ---")
-                        print("oggetti = ('tavolo', 'sedia', 'lampada')")
-                        print("print(f\"Primo elemento: {oggetti[0]}\")")
-                        print("print(f\"Ultimo elemento: {oggetti[-1]}\")")
-                        print("--- Fine Esercizio 3 ---\n")
-                    elif Scelta_Esercizio == "4":
-                        print("\n--- Soluzione Esercizio 4 ---")
-                        print("animale = {'nome': 'Fido', 'specie': 'cane', 'età': 5}")
-                        print("print(animale['nome'])")
-                        print("--- Fine Esercizio 4 ---\n")
-                    elif Scelta_Esercizio == "5":
-                        print("\n--- Soluzione Esercizio 5 ---")
-                        print("animale = {'nome': 'Fido', 'specie': 'cane', 'età': 5}")
-                        print("animale['età'] = 6")
-                        print("print(animale)")
-                        print("--- Fine Esercizio 5 ---\n")
-                    elif Scelta_Esercizio == "6":
-                        print("\n--- Soluzione Esercizio 6 ---")
-                        print("numeri = {1, 2, 3, 4, 5}")
-                        print("numeri.add(6)")
-                        print("numeri.remove(3)")
-                        print("print(numeri)")
-                        print("--- Fine Esercizio 6 ---\n")
-                    elif Scelta_Esercizio == "7":
-                        print("\n--- Soluzione Esercizio 7 ---")
-                        print("insieme1 = {'Alice', 'Bob', 'Charlie'}")
-                        print("insieme2 = {'Charlie', 'David', 'Alice'}")
-                        print("intersezione = insieme1.intersection(insieme2)")
-                        print("print(intersezione)")
-                        print("# Oppure: print(insieme1 & insieme2)")
-                        print("--- Fine Esercizio 7 ---\n")
-                    elif Scelta_Esercizio == "8":
-                        print("\n--- Soluzione Esercizio 8 ---")
-                        print("citta = ['Roma', 'Milano', 'Napoli']")
-                        print("for c in citta:")
-                        print("    print(c)")
-                        print("--- Fine Esercizio 8 ---\n")
-                    elif Scelta_Esercizio == "9":
-                        print("\n--- Soluzione Esercizio 9 ---")
-                        print("prodotti = {'pane': 2.50, 'latte': 1.20, 'uova': 3.00}")
-                        print("for prodotto, prezzo in prodotti.items():")
-                        print("    print(f\"Prodotto: {prodotto}, Prezzo: {prezzo}€\")")
-                        print("--- Fine Esercizio 9 ---\n")
-                    elif Scelta_Esercizio == "10":
-                        print("\n--- Soluzione Esercizio 10 ---")
-                        print("numeri_utente = []")
-                        print("somma = 0")
-                        print("for i in range(3):")
-                        print("    num = int(input(f\"Inserisci il numero {i+1}: \"))")
-                        print("    numeri_utente.append(num)")
-                        print("for n in numeri_utente:")
-                        print("    somma += n")
-                        print("print(f\"La somma dei numeri è: {somma}\")")
-                        print("--- Fine Esercizio 10 ---\n")
-                    elif Scelta_Esercizio == "torna":
-                        print("Torno alla selezione esercizi.")
-                        time.sleep(1)
-                        break
-                    else:
-                        print("Esercizio non trovato o scelta non valida. Per favore, scegli un numero da 1 a 10 o digita 'torna'.")
                     time.sleep(2)
 
             elif Scelta_Esercizi_Lezione == "6": # Torna al menu principale dalla selezione esercizi
