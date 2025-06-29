@@ -1,7 +1,7 @@
 import time  # Importa il modulo time per usare la funzione sleep
 import sys   # Importa il modulo sys per uscire dal programma
 
-# Lezioni 1, 2, 3 e 4 su Python
+# Lezioni 1, 2, 3, 4 e 5 su Python
 print("ATTENZIONE! PER ESEGUIRE I CODICI SPIEGATI IN QUESTA SERIE DI LEZIONI è NECESSARIO SCARICARE LA VERSIONE 3 DI PYTHON (tutte le sotto-versioni sono accettate! es 3.14)")
 time.sleep(4)
 
@@ -416,8 +416,10 @@ while True: # Ciclo principale per tornare al menu
         time.sleep(2)
         print("Per farlo, possiamo usare una lista, che è una struttura di dati che permette di memorizzare più valori in un'unica variabile.")
         time.sleep(2)
-        print("Le strutture di dati di python sono le liste, le truple, i dizionari, gli insiemi e le enumeerazioni.")
+        print("Le strutture di dati di python sono le liste, le tuple, i dizionari, gli insiemi e le enumerazioni.")
         time.sleep(2)
+        
+        # --- Liste ---
         print("\n**Le Liste**")
         print("Le liste sono collezioni ordinate di elementi, che possono essere di qualsiasi tipo (numeri, stringhe, altri oggetti).")
         time.sleep(2)
@@ -427,67 +429,175 @@ while True: # Ciclo principale per tornare al menu
         print("nomi_ospiti = ['Alice', 'Bob', 'Charlie']")
         time.sleep(2)
         print("Puoi accedere agli elementi della lista usando l'indice (partendo da 0):")
-        print("print(nomi_ospiti[0])  # Stampa 'Alice'")
+        print("print(nomi_ospiti[0])  # Stampa 'Alice'")
         time.sleep(2)
         print("Puoi aggiungere un elemento alla lista con `append()`:")
-        print("nomi_ospiti.append('David')  # Aggiunge 'David' alla fine della lista")
+        print("nomi_ospiti.append('David')  # Aggiunge 'David' alla fine della lista")
         time.sleep(2)
         print("Puoi rimuovere un elemento con `remove()`:")
-        print("nomi_ospiti.remove('Bob')  # Rimuove 'Bob' dalla lista")
+        print("nomi_ospiti.remove('Bob')  # Rimuove 'Bob' dalla lista")
         time.sleep(2)   
         print("Puoi anche ordinare la lista con `sort()`:") 
-        print("nomi_ospiti.sort()  # Ordina la lista in ordine alfabetico")
+        print("nomi_ospiti.sort()  # Ordina la lista in ordine alfabetico")
         time.sleep(2)
         print("Le liste sono molto flessibili e utili per memorizzare collezioni di dati.")
         time.sleep(2)
+
+        # --- ESERCIZI DI ALLENAMENTO - LISTE ---
+        print("\n--- ESERCIZI DI ALLENAMENTO: LISTE ---")
+        print("Mettiamo subito in pratica ciò che hai imparato!")
+        
+        # Esercizio 1: Creare una lista
+        print("\n**Esercizio 1: Crea una lista di tuoi hobby.**")
+        print("Crea una lista chiamata `i_miei_hobby` con almeno 3 hobby (es. 'lettura', 'cucina', 'sport').")
+        while True:
+            risposta_hobby = input("Scrivi la riga di codice per creare la lista: ")
+            if risposta_hobby.strip() == "i_miei_hobby = ['lettura', 'cucina', 'sport']":
+                print("Ottimo! Lista creata correttamente.")
+                break
+            else:
+                print("Non è corretto. Ricorda di usare le parentesi quadre e le virgolette per le stringhe.")
+                
+        # Esercizio 2: Accedere a un elemento
+        print("\n**Esercizio 2: Accedi e stampa il secondo elemento della tua lista.**")
+        print("Ricorda che l'indice parte da 0!")
+        while True:
+            risposta_accesso = input("Scrivi la riga di codice per stampare il secondo hobby: ")
+            if risposta_accesso.strip() == "print(i_miei_hobby[1])":
+                print("Fantastico! Hai stampato l'elemento corretto.")
+                break
+            else:
+                print("Sbagliato. L'indice del secondo elemento è 1, non 2. Riprova.")
+                
+        # Esercizio 3: Aggiungere un elemento
+        print("\n**Esercizio 3: Aggiungi un nuovo hobby alla tua lista.**")
+        print("Usa il metodo `append()` per aggiungere un hobby a tua scelta alla fine della lista `i_miei_hobby`.")
+        while True:
+            risposta_append = input("Scrivi la riga di codice per aggiungere un hobby: ")
+            if risposta_append.strip() == "i_miei_hobby.append('viaggiare')":
+                print("Perfetto! Il tuo hobby è stato aggiunto. La lista aggiornata è:")
+                print("['lettura', 'cucina', 'sport', 'viaggiare']")
+                break
+            else:
+                print("Non è corretto. Ricorda la sintassi `lista.append(elemento)`. Riprova.")
+        
+        # --- Tuple ---
         print("\n**Le Tuple**")
         print("Le tuple sono simili alle liste, ma sono **immutabili**, cioè non puoi modificarle dopo averle create.")
         time.sleep(2)
         print("Si definiscono con le parentesi tonde `()` e sono utili quando vuoi garantire che i dati non vengano modificati.")
         time.sleep(2)
         print("Esempio di tupla di coordinate:")
-        print("coordinate = (10, 20)  # Tupla con due valori")
+        print("coordinate = (10, 20)  # Tupla con due valori")
         time.sleep(2)
         print("Puoi accedere agli elementi della tupla come nelle liste, ma non puoi modificarli:")
-        print("print(coordinate[0])  # Stampa 10")
+        print("print(coordinate[0])  # Stampa 10")
         time.sleep(2)
         print("Le tuple sono utili per rappresentare dati che non devono cambiare, come le coordinate di un punto.")
         time.sleep(2)
+        
+        # --- ESERCIZI DI ALLENAMENTO - TUPLE ---
+        print("\n--- ESERCIZI DI ALLENAMENTO: TUPLE ---")
+        
+        # Esercizio 4: Creare una tupla
+        print("\n**Esercizio 4: Crea una tupla dei giorni della settimana (solo i primi tre).**")
+        print("Creala con i nomi dei giorni: 'Lun', 'Mar', 'Mer'. Chiamala `giorni_lavorativi`.")
+        while True:
+            risposta_tupla = input("Scrivi la riga di codice per creare la tupla: ")
+            if risposta_tupla.strip() == "giorni_lavorativi = ('Lun', 'Mar', 'Mer')":
+                print("Esatto! Tupla creata correttamente.")
+                break
+            else:
+                print("Sbagliato. Ricorda di usare le parentesi tonde `()`.")
+        
+        # Esercizio 5: Accedere a un elemento della tupla
+        print("\n**Esercizio 5: Stampa il terzo giorno della tupla.**")
+        while True:
+            risposta_accesso_tupla = input("Scrivi la riga di codice per stampare il terzo elemento: ")
+            if risposta_accesso_tupla.strip() == "print(giorni_lavorativi[2])":
+                print("Corretto! Stai diventando un esperto!")
+                break
+            else:
+                print("Sbagliato. Controlla l'indice corretto. Riprova.")
+        
+        # --- Dizionari ---
         print("\n**I Dizionari**")
         print("I dizionari sono strutture di dati che memorizzano coppie chiave-valore, simili a un elenco telefonico.")
         time.sleep(2)
         print("Si definiscono con le parentesi graffe `{}` e le chiavi sono uniche.")
         time.sleep(2)
         print("Esempio di dizionario di un contatto:")
-        print("contatto = {'nome': 'Alice', 'telefono': '1234567890', 'email': alice@email.com}")
+        print("contatto = {'nome': 'Alice', 'telefono': '1234567890', 'email': 'alice@email.com'}")
         time.sleep(2)
         print("Puoi accedere ai valori usando le chiavi:")
-        print("print(contatto['nome'])  # Stampa 'Alice'")
+        print("print(contatto['nome'])  # Stampa 'Alice'")
         time.sleep(2)
         print("Puoi aggiungere o modificare un elemento con la chiave:")
-        print("contatto['indirizzo'] = 'Via Roma 1'  # Aggiunge un nuovo elemento")
+        print("contatto['indirizzo'] = 'Via Roma 1'  # Aggiunge un nuovo elemento")
         time.sleep(2)
         print("Puoi rimuovere un elemento con `del`:")
-        print("del contatto['telefono']  # Rimuove l'elemento con chiave 'telefono'")
+        print("del contatto['telefono']  # Rimuove l'elemento con chiave 'telefono'")
         time.sleep(2)
         print("I dizionari sono molto utili per memorizzare dati strutturati e accedervi rapidamente.")
         time.sleep(2) 
+        
+        # --- ESERCIZI DI ALLENAMENTO - DIZIONARI ---
+        print("\n--- ESERCIZI DI ALLENAMENTO: DIZIONARI ---")
+        
+        # Esercizio 6: Creare un dizionario
+        print("\n**Esercizio 6: Crea un dizionario per un libro.**")
+        print("Crealo con le chiavi 'titolo', 'autore' e 'anno_pubblicazione'.")
+        while True:
+            risposta_dizionario = input("Scrivi la riga di codice per creare il dizionario `libro`: ")
+            if risposta_dizionario.strip() == "libro = {'titolo': 'Il Signore degli Anelli', 'autore': 'J.R.R. Tolkien', 'anno_pubblicazione': 1954}":
+                print("Ottimo! Dizionario creato correttamente.")
+                break
+            else:
+                print("Non è corretto. Ricorda di usare le parentesi graffe `{}` e le coppie chiave-valore.")
+                
+        # Esercizio 7: Aggiungere un valore al dizionario
+        print("\n**Esercizio 7: Aggiungi la chiave 'genere' al dizionario `libro`.**")
+        while True:
+            risposta_aggiungi_diz = input("Scrivi la riga di codice per aggiungere il genere 'Fantasy': ")
+            if risposta_aggiungi_diz.strip() == "libro['genere'] = 'Fantasy'":
+                print("Perfetto! Il dizionario è stato aggiornato. Ora contiene anche il genere.")
+                break
+            else:
+                print("Sbagliato. Ricorda la sintassi `dizionario[chiave] = valore`. Riprova.")
+        
+        # --- Insiemi ---
         print("\n**Gli Insiemi**")
         print("Gli insiemi sono collezioni non ordinate di elementi unici, simili a un insieme matematico.")
-        time.sleep(2)  
+        time.sleep(2)   
         print("Si definiscono con le parentesi graffe `{}` o con la funzione `set()`.")
         time.sleep(2)
         print("Esempio di insieme di numeri:")
         print("numeri_unici = {1, 2, 3, 4, 5}")
         time.sleep(2)
         print("Puoi aggiungere un elemento con `add()`:")
-        print("numeri_unici.add(6)  # Aggiunge 6 all'insieme")
+        print("numeri_unici.add(6)  # Aggiunge 6 all'insieme")
         time.sleep(2)
         print("Puoi rimuovere un elemento con `remove()`:")
-        print("numeri_unici.remove(3)  # Rimuove 3 dall'insieme")
+        print("numeri_unici.remove(3)  # Rimuove 3 dall'insieme")
         time.sleep(2)
         print("Gli insiemi sono utili per operazioni matematiche come unioni, intersezioni e differenze tra collezioni di dati.")
         time.sleep(2)
+        
+        # --- ESERCIZI DI ALLENAMENTO - INSIEMI ---
+        print("\n--- ESERCIZI DI ALLENAMENTO: INSIEMI ---")
+        
+        # Esercizio 8: Creare un insieme e aggiungere un elemento
+        print("\n**Esercizio 8: Crea un insieme di colori e aggiungine uno nuovo.**")
+        print("Crea un insieme `colori = {'rosso', 'verde', 'blu'}` e aggiungi 'giallo'.")
+        while True:
+            risposta_set = input("Scrivi le righe di codice: ")
+            if risposta_set.strip() == "colori = {'rosso', 'verde', 'blu'}\ncolori.add('giallo')":
+                print("Molto bene! L'insieme è stato aggiornato correttamente.")
+                break
+            else:
+                print("Non è corretto. Controlla la sintassi per creare l'insieme e usare `add()`. Riprova.")
+                
+        # --- Enumerazioni ---
         print("\n**Le Enumerazioni**")
         print("Le enumerazioni (o enum) sono un modo per definire un insieme di costanti con nomi significativi.")
         time.sleep(2)
@@ -496,28 +606,28 @@ while True: # Ciclo principale per tornare al menu
         print("Esempio di enumerazione dei giorni della settimana:")
         print("from enum import Enum")
         print("class Giorni(Enum):")
-        print("    LUNEDI = 1")
-        print("    MARTEDI = 2")
-        print("    MERCOLEDI = 3")
-        print("    GIOVEDI = 4")
-        print("    VENERDI = 5")
-        print("    SABATO = 6")
-        print("    DOMENICA = 7")
+        print("    LUNEDI = 1")
+        print("    MARTEDI = 2")
+        print("    MERCOLEDI = 3")
+        print("    GIOVEDI = 4")
+        print("    VENERDI = 5")
+        print("    SABATO = 6")
+        print("    DOMENICA = 7")
         time.sleep(2)
         print("Puoi accedere ai valori dell'enumerazione usando il nome della classe e il nome del membro:")
-        print("print(Giorni.LUNEDI)  # Stampa 'Giorni.LUNEDI'")
+        print("print(Giorni.LUNEDI)  # Stampa 'Giorni.LUNEDI'")
         time.sleep(2)
         print("Le enumerazioni sono utili per rappresentare insiemi di costanti con nomi significativi, migliorando la leggibilità del codice.")
         time.sleep(2)
         print("\nHai completato la Lezione 5! Ora conosci le principali strutture di dati di Python e come usarle.")
-        print("fine della Lezione 5. Torno al menu principale.")
+        print("Fine della Lezione 5. Torno al menu principale.")
         time.sleep(2)
     
-    elif Scelta_Generale == "6": # Se l'utente sceglie "5" per gli esercizi
+    elif Scelta_Generale == "6": # Se l'utente sceglie "6" per gli esercizi
         while True: # Ciclo per la sezione esercizi per permettere di scegliere tra lezioni o tornare al menu
             print("\n--- SEZIONE ESERCIZI ---")
             print("Quale lezione di esercizi vuoi affrontare?")
-            Scelta_Esercizi_Lezione = input("1 = Lezione 1, 2 = Lezione 2, 3 = Lezione 3, 4 = Lezione 4, 5 = Torna al menu principale: ")
+            Scelta_Esercizi_Lezione = input("1 = Lezione 1, 2 = Lezione 2, 3 = Lezione 3, 4 = Lezione 4, 5 = Lezione 5, 6 = Torna al menu principale: ")
 
             if Scelta_Esercizi_Lezione == "1":
                 while True: # Ciclo interno per gli esercizi della Lezione 1
@@ -955,21 +1065,113 @@ while True: # Ciclo principale per tornare al menu
                     else:
                         print("Esercizio non trovato o scelta non valida. Per favore, scegli un numero da 1 a 15 o digita 'torna'.")
                     time.sleep(2)
-            
-            elif Scelta_Esercizi_Lezione == "5": # Torna al menu principale dalla selezione esercizi
+
+            elif Scelta_Esercizi_Lezione == "5":
+                while True: # Ciclo interno per gli esercizi della Lezione 5
+                    print("\n--- ESERCIZI LEZIONE 5 ---")
+                    print("Hai scelto di fare gli esercizi sulla Lezione 5: Strutture di Dati.")
+                    print("1: Lista - Crea una lista di 5 frutti, aggiungine uno nuovo e stampala.")
+                    print("2: Lista - Ordina alfabeticamente una lista di nomi e stampala.")
+                    print("3: Tupla - Crea una tupla con 3 oggetti e stampa il primo e l'ultimo elemento.")
+                    print("4: Dizionario - Crea un dizionario per un animale (chiavi: 'nome', 'specie', 'età'). Stampa il nome dell'animale.")
+                    print("5: Dizionario - Aggiorna l'età dell'animale e stampa il dizionario aggiornato.")
+                    print("6: Insieme - Crea un insieme con numeri da 1 a 5, aggiungi il numero 6 e rimuovi il 3. Stampa l'insieme finale.")
+                    print("7: Insieme - Crea due insiemi di nomi. Stampa i nomi che sono presenti in entrambi (intersezione).")
+                    print("8: Ciclo + Lista - Crea una lista di città e usa un ciclo `for` per stampare ogni città.")
+                    print("9: Dizionario + Ciclo - Crea un dizionario di prodotti e prezzi. Usa un ciclo `for` per stampare ogni prodotto e il suo prezzo.")
+                    print("10: Combinazione - Chiedi all'utente di inserire 3 numeri. Salvali in una lista. Stampa la somma dei numeri usando un ciclo `for`.")
+                    
+                    time.sleep(2)
+                    Scelta_Esercizio = input("Quale esercizio della Lezione 5 vuoi vedere? Inserisci il numero (1-10) o 'torna' per tornare alla selezione esercizi: ").lower()
+                    
+                    if Scelta_Esercizio == "1":
+                        print("\n--- Soluzione Esercizio 1 ---")
+                        print("frutti = ['mela', 'banana', 'ciliegia', 'arancia', 'uva']")
+                        print("frutti.append('kiwi')")
+                        print("print(frutti)")
+                        print("--- Fine Esercizio 1 ---\n")
+                    elif Scelta_Esercizio == "2":
+                        print("\n--- Soluzione Esercizio 2 ---")
+                        print("nomi = ['Marco', 'Giulia', 'Andrea', 'Silvia']")
+                        print("nomi.sort()")
+                        print("print(nomi)")
+                        print("--- Fine Esercizio 2 ---\n")
+                    elif Scelta_Esercizio == "3":
+                        print("\n--- Soluzione Esercizio 3 ---")
+                        print("oggetti = ('tavolo', 'sedia', 'lampada')")
+                        print("print(f\"Primo elemento: {oggetti[0]}\")")
+                        print("print(f\"Ultimo elemento: {oggetti[-1]}\")")
+                        print("--- Fine Esercizio 3 ---\n")
+                    elif Scelta_Esercizio == "4":
+                        print("\n--- Soluzione Esercizio 4 ---")
+                        print("animale = {'nome': 'Fido', 'specie': 'cane', 'età': 5}")
+                        print("print(animale['nome'])")
+                        print("--- Fine Esercizio 4 ---\n")
+                    elif Scelta_Esercizio == "5":
+                        print("\n--- Soluzione Esercizio 5 ---")
+                        print("animale = {'nome': 'Fido', 'specie': 'cane', 'età': 5}")
+                        print("animale['età'] = 6")
+                        print("print(animale)")
+                        print("--- Fine Esercizio 5 ---\n")
+                    elif Scelta_Esercizio == "6":
+                        print("\n--- Soluzione Esercizio 6 ---")
+                        print("numeri = {1, 2, 3, 4, 5}")
+                        print("numeri.add(6)")
+                        print("numeri.remove(3)")
+                        print("print(numeri)")
+                        print("--- Fine Esercizio 6 ---\n")
+                    elif Scelta_Esercizio == "7":
+                        print("\n--- Soluzione Esercizio 7 ---")
+                        print("insieme1 = {'Alice', 'Bob', 'Charlie'}")
+                        print("insieme2 = {'Charlie', 'David', 'Alice'}")
+                        print("intersezione = insieme1.intersection(insieme2)")
+                        print("print(intersezione)")
+                        print("# Oppure: print(insieme1 & insieme2)")
+                        print("--- Fine Esercizio 7 ---\n")
+                    elif Scelta_Esercizio == "8":
+                        print("\n--- Soluzione Esercizio 8 ---")
+                        print("citta = ['Roma', 'Milano', 'Napoli']")
+                        print("for c in citta:")
+                        print("    print(c)")
+                        print("--- Fine Esercizio 8 ---\n")
+                    elif Scelta_Esercizio == "9":
+                        print("\n--- Soluzione Esercizio 9 ---")
+                        print("prodotti = {'pane': 2.50, 'latte': 1.20, 'uova': 3.00}")
+                        print("for prodotto, prezzo in prodotti.items():")
+                        print("    print(f\"Prodotto: {prodotto}, Prezzo: {prezzo}€\")")
+                        print("--- Fine Esercizio 9 ---\n")
+                    elif Scelta_Esercizio == "10":
+                        print("\n--- Soluzione Esercizio 10 ---")
+                        print("numeri_utente = []")
+                        print("somma = 0")
+                        print("for i in range(3):")
+                        print("    num = int(input(f\"Inserisci il numero {i+1}: \"))")
+                        print("    numeri_utente.append(num)")
+                        print("for n in numeri_utente:")
+                        print("    somma += n")
+                        print("print(f\"La somma dei numeri è: {somma}\")")
+                        print("--- Fine Esercizio 10 ---\n")
+                    elif Scelta_Esercizio == "torna":
+                        print("Torno alla selezione esercizi.")
+                        time.sleep(1)
+                        break
+                    else:
+                        print("Esercizio non trovato o scelta non valida. Per favore, scegli un numero da 1 a 10 o digita 'torna'.")
+                    time.sleep(2)
+
+            elif Scelta_Esercizi_Lezione == "6": # Torna al menu principale dalla selezione esercizi
                 print("Torno al menu principale.")
                 time.sleep(1)
                 break
             else:
-                print("Scelta non valida. Per favore, scegli 1, 2, 3, 4 o 5.")
+                print("Scelta non valida. Per favore, scegli 1, 2, 3, 4, 5 o 6.")
             time.sleep(2)
     
     elif Scelta_Generale == "esci": # Opzione per uscire dal programma
         print("Grazie per aver usato il programma! Arrivederci!")
-        print("Uscita in corso...")
         time.sleep(1)
         sys.exit() # Esce completamente dal programma
         
     else: # Se l'utente digita qualcosa di diverso dalle opzioni valide
-        print("Scelta non valida. Per favore, scegli 1, 2, 3, 4, 5 o digita 'Esci'.")
+        print("Scelta non valida. Per favore, scegli 1, 2, 3, 4, 5, 6 o digita 'Esci'.")
         time.sleep(2)
