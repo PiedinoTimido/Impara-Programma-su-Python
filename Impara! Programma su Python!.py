@@ -1192,7 +1192,8 @@ while True: # Ciclo principale per tornare al menu
     
     elif Scelta_Generale == "esci": # Opzione per uscire dal programma
         print("Grazie per aver usato il programma! Arrivederci!")
-        time.sleep(1)
+print("Uscita in corso..")
+        time.sleep(2)
         sys.exit() # Esce completamente dal programma
         
     else: # Se l'utente digita qualcosa di diverso dalle opzioni valide
