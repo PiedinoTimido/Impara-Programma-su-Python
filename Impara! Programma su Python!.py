@@ -1,3 +1,6 @@
+# Impara! Programma su Python!
+# Creato da PiedinoTimido
+
 import time  # Importa il modulo time per usare la funzione sleep
 import sys   # Importa il modulo sys per uscire dal programma
 
