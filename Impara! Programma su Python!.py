@@ -1,5 +1,7 @@
 # Impara! Programma su Python!
 # Creato da PiedinoTimido
+# Questo programma è un'introduzione alle basi di Python, con lezioni e esercizi pratici")
+# Grazie mille all'utente che legge questo perche signigfica che è interessato a imparare Python!
 
 import time  # Importa il modulo time per usare la funzione sleep
 import sys   # Importa il modulo sys per uscire dal programma
